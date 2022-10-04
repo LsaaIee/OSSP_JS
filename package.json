@@ -12,9 +12,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "hangul-js": "^0.2.6"
+    "hangul-js": "^0.2.6",
+    "node-html-parser": "^6.1.1"
   },
-  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/LsaaIee/OSSP_JS.git"
