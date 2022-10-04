@@ -1,24 +1,23 @@
-#!/usr/bin/env node
-
-/*let menu = {
-    width: 200,
-    height: 300,
-    title: "My menu"
-}
-
-function multiplyNumeric(obj){
-    for (let key in obj){
-        if (typeof obj[key] === 'number'){
-            obj[key] *= 3
-        }
+const https = require("https")
+const parser = require("node-html-parser")
+const url = 'https://www.skku.edu/skku/campus/skk_comm/notice01.do'
+const header = {
+    headers:{
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36"
     }
-    return menu
 }
-
-console.log(multiplyNumeric(menu))*/
-
-const hangul = require("hangul-js")
-console.log(hangul.assemble("믹스동"))
-console.log(hangul.assemble("쇠고기양송이덮밥"))
-
-console.log("Hello World!")
+https.get(
+    url, header, (res) => {
+        let data = ""
+        res.on("data", (chunk) => {
+            data += chunk
+        })
+        res.on("end", () => {
+            const root = parser.parse(data)
+            const list = root.querySelectorAll(".board-list-content-title > a")
+            list.forEach((item) => {
+                console.log(item.innerText.trim())
+            })
+        })
+    }
+)
