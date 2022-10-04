@@ -1,3 +1,3 @@
 # OSSP_JS
 
-Stuff from OSSP class
+Stuffs from OSSP class
