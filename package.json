@@ -1,17 +1,26 @@
 {
   "name": "skku-menu",
   "version": "1.0.0",
-  "description": "",
+  "description": "Stuffs from OSSP class",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "bin": {
-    "menu": "./main.js"
+    "menu": "main.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "hangul-js": "^0.2.6"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LsaaIee/OSSP_JS.git"
+  },
+  "bugs": {
+    "url": "https://github.com/LsaaIee/OSSP_JS/issues"
+  },
+  "homepage": "https://github.com/LsaaIee/OSSP_JS#readme"
 }
