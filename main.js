@@ -20,3 +20,5 @@ console.log(multiplyNumeric(menu))*/
 const hangul = require("hangul-js")
 console.log(hangul.assemble("믹스동"))
 console.log(hangul.assemble("쇠고기양송이덮밥"))
+
+console.log("Hello World!")
