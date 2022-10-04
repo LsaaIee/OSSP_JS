@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const https = require("https")
 const parser = require("node-html-parser")
 const url = 'https://www.skku.edu/skku/campus/skk_comm/notice01.do'
